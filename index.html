@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0F102E">
+  <meta name="description" content="MARS — A junior astronaut risk simulator exploring innovation, science, and sustainability.">
+
+  <title>Mission Ares Risk Simulator</title>
+
+  <link rel="icon" href="favicon-veloire-2.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js" defer></script>
+  <script src="https://unpkg.com/split-type" defer></script>
+
+  <script type="module" src="script.js" defer></script>
+  <script src="game-section.js" defer></script>
+</head>
+
+<body class="intro-locked">
+
+  <div
+    class="cursor-follower"
+    id="cursorFollower"
+    aria-hidden="true">
+  </div>
+
+  <section class="intro" id="intro" aria-label="Welcome screen">
+
+    <div class="intro-grain" aria-hidden="true"></div>
+
+    <div class="intro-top">
+    </div>
+
+    <div class="intro-gallery" aria-hidden="true">
+
+      <div class="intro-panel intro-panel-1">
+        <img src="M7 - MARS.png" alt="">
+      </div>
+
+      <div class="intro-panel intro-panel-2">
+        <img src="M7 - MARS.png" alt="">
+      </div>
+
+      <div class="intro-panel intro-panel-3">
+        <img src="M7 - MARS.png" alt="">
+      </div>
+
+      <div class="intro-panel intro-panel-4">
+        <img src="M7 - MARS.png" alt="">
+      </div>
+
+      <div class="intro-panel intro-panel-5">
+        <img src="M7 - MARS.png" alt="">
+      </div>
+
+    </div>
+
+    <div class="intro-center">
+
+      <p class="eyebrow intro-kicker">
+        JUNIOR ASTRONAUT RISK SIMULATOR
+      </p>
+
+      <h1 class="intro-title intro-title-mars" aria-label="MARS">
+
+        <span class="mars-mask">
+          <span class="intro-letter" aria-hidden="true">M</span>
+        </span>
+
+        <span class="mars-mask">
+          <span class="intro-letter" aria-hidden="true">A</span>
+        </span>
+
+        <span class="mars-mask">
+          <span class="intro-letter" aria-hidden="true">R</span>
+        </span>
+
+        <span class="mars-mask">
+          <span class="intro-letter" aria-hidden="true">S</span>
+        </span>
+
+      </h1>
+
+      <button class="explore-button" id="exploreButton" type="button">
+        <span>CLICK TO EXPLORE</span>
+        <span class="button-arrow" aria-hidden="true">↗</span>
+      </button>
+
+    </div>
+
+    <div class="intro-bottom">
+      <span>BY BENFRANK S.C.</span>
+      <span>NASA SPACE APPS</span>
+    </div>
+
+  </section>
+
+  <main class="site-content" id="top">
+
+    <nav class="nav" aria-label="Main navigation">
+
+      <a class="nav-brand" href="#top" aria-label="Home">
+        <span>MARS</span><i>.</i>
+      </a>
+
+      <span class="nav-note">
+        MISSION ARES RISK SIMULATOR
+      </span>
+
+      <a class="nav-link" href="#simulador">
+        PLAY THE MISSION <span aria-hidden="true">↗</span>
+      </a>
+
+    </nav>
+
+    <header class="hero">
+
+      <div class="hero-bg-layers" aria-hidden="true">
+
+        <img
+          src="MAIN DESIGN F - MARS.png"
+          alt=""
+          class="hero-layer-bg"
+        >
+
+        <img
+          src="DESIGN PORTRAIT F - MARS.png"
+          class="hero-layer-mobile"
+          alt=""
+          aria-hidden="true"
+        >
+
+      </div>
+
+      <span class="hero-scroll-hint">
+        SCROLL TO DISCOVER <span aria-hidden="true">↓</span>
+      </span>
+
+      <div class="mars-pixel-transition" aria-hidden="true">
+        <div class="mars-pixel-row"></div>
+        <div class="mars-pixel-row"></div>
+        <div class="mars-pixel-row"></div>
+        <div class="mars-pixel-row"></div>
+      </div>
+
+    </header>
+
+    <section class="mars-organisms-section mars-services-section" id="proyecto">
+
+      <div class="mars-services-inner">
+
+        <div class="mars-services-layout">
+
+          <div class="mars-services-list-column">
+
+            <div class="mars-services-list">
+
+              <div class="mars-services-indicator"></div>
+
+              <div class="mars-service active" aria-pressed="true">
+                <p>Problem</p>
+              </div>
+
+              <div class="mars-service" aria-pressed="false">
+                <p>Solution</p>
+              </div>
+
+              <div class="mars-service" aria-pressed="false">
+                <p>Data</p>
+              </div>
+
+              <div class="mars-service" aria-pressed="false">
+                <p>Impact</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="mars-services-detail">
+
+            <p class="mars-services-detail-label" id="mars-service-phase">
+              01 — THE PROBLEM
+            </p>
+
+            <div class="mars-services-copy">
+              <p id="mars-service-description">
+                Air pollution and carbon dioxide emissions
+                represent environmental challenges that require
+                sustainable solutions. This project explores
+                biological alternatives capable of contributing
+                to a cleaner environment.
+              </p>
+            </div>
+
+            <div class="mars-services-detail-footer">
+              <span>MISSION ARES RISK SIMULATOR</span>
+              <span>SCROLL TO DISCOVER</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="mars-services-progress-bar">
+          <div class="mars-services-progress-fill"></div>
+        </div>
+
+        <div class="mars-services-index" aria-live="polite">
+
+          <span id="mars-current-count">1</span>
+
+          <span class="mars-services-separator"></span>
+
+          <span class="mars-services-total">4</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="mars-after-services-spacer" aria-hidden="true"></div>
+
+    <section class="science-section mars-science-section" id="ciencia">
+
+      <div class="mars-science-pixel-transition" aria-hidden="true">
+        <div class="mars-pixel-row"></div>
+        <div class="mars-pixel-row"></div>
+        <div class="mars-pixel-row"></div>
+        <div class="mars-pixel-row"></div>
+      </div>
+
+      <div class="science-image" data-parallax="0.12">
+
+        <img
+          src="DESIGN_EXPERIENCE ENG - MARS.png"
+          class="science-image-desktop"
+          alt="MARS design and experience"
+        >
+
+        <img
+          src="PORTRAIT DESIGN_EXPERIENCE ENG - MARS.png"
+          class="science-image-mobile"
+          alt=""
+          aria-hidden="true"
+        >
+
+      </div>
+
+      <div class="science-overlay"></div>
+
+      <div class="science-content section-pad">
+
+        <div class="science-bottom">
+
+          <div class="science-copy reveal">
+
+            <article class="science-item">
+
+              <span class="science-item-number">01</span>
+
+              <div class="science-item-content">
+
+                <h3>BASE ENVIRONMENT</h3>
+
+                <p>
+                  The mission takes place on real terrain within
+                  Jezero Crater, Mars (18.427° N, 77.437° E),
+                  modeled using high-resolution orbital images
+                  captured by the HiRISE camera (ESP_045994_1985).
+                </p>
+
+              </div>
+
+            </article>
+
+            <article class="science-item">
+
+              <span class="science-item-number">02</span>
+
+              <div class="science-item-content">
+
+                <h3>AEROSPACE INTERFACE (UI)</h3>
+
+                <p>
+                  The interface features a high-contrast color palette
+                  inspired by real aerospace control centers, combining
+                  deep blues, clean whites, and safety oranges. It uses
+                  easy-to-read typography and panels with simplified
+                  buttons and visual indicators, specifically designed
+                  to allow young people aged 7 to 12 to operate the
+                  station intuitively and effortlessly.
+                </p>
+
+              </div>
+
+            </article>
+
+            <article class="science-item">
+
+              <span class="science-item-number">03</span>
+
+              <div class="science-item-content">
+
+                <h3>MISSION FLOW (UX)</h3>
+
+                <p>
+                  The system guides players through a progressive
+                  learning curve divided into four stages:
+                  Introduction → Training → Mission → Evaluation,
+                  ensuring they master life support systems before
+                  facing resource management challenges under pressure.
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="mars-world-section" id="mars-world">
+
+      <div class="mars-world-stars" aria-hidden="true">
+
+        <div
+          class="mars-stars-layer stars-far"
+          data-mars-parallax="18"
+        ></div>
+
+        <div
+          class="mars-stars-layer stars-mid"
+          data-mars-parallax="-28"
+        ></div>
+
+        <div
+          class="mars-stars-layer stars-near"
+          data-mars-parallax="42"
+        ></div>
+
+        <div
+          class="mars-world-nebula"
+          data-mars-parallax="-20"
+        ></div>
+
+      </div>
+
+      <div class="mars-world-container">
+
+        <header class="mars-world-heading" data-mars-reveal>
+
+          <span class="mars-world-eyebrow">
+            M.A.R.S. / MISSION SYSTEMS
+          </span>
+
+          <h2>
+            Beyond the
+            <span>mission.</span>
+          </h2>
+
+          <p>
+            An experience designed to explore, learn,
+            and understand the challenges of building
+            a habitable base on Mars.
+          </p>
+
+        </header>
+
+        <div class="mars-world-overview">
+
+          <div class="mars-world-location" data-mars-reveal>
+
+            <span class="mars-world-index">
+              MISSION LOCATION
+            </span>
+
+            <h3>
+              Jezero
+              <span>Crater.</span>
+            </h3>
+
+            <p>
+              Jezero Crater is the setting for our mission.
+              There, junior astronauts must understand
+              how to manage the resources and conditions
+              required to sustain a Martian base.
+            </p>
+
+            <a
+              href="https://www.uahirise.org/ESP_045994_1985"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mars-world-link"
+            >
+              HiRISE Image Reference
+              <span>↗</span>
+            </a>
+
+          </div>
+
+          <div class="mars-world-data" data-mars-reveal>
+
+            <div class="mars-world-data-heading">
+              <span>MISSION COORDINATES</span>
+              <span>01 — 01</span>
+            </div>
+
+            <div class="mars-world-coordinate">
+
+              <span>LATITUDE</span>
+              <strong>18.427° N</strong>
+
+            </div>
+
+            <div class="mars-world-coordinate">
+
+              <span>LONGITUDE</span>
+              <strong>77.437° E</strong>
+
+            </div>
+
+            <div class="mars-world-data-footer">
+              <span>PLANET</span>
+              <strong>MARS</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="mars-world-profile" data-mars-reveal>
+
+          <div class="mars-world-profile-age">
+
+            <span>7 – 12</span>
+            <small>MAIN AUDIENCE</small>
+
+          </div>
+
+          <div class="mars-world-profile-content">
+
+            <span class="mars-world-index">
+              EDUCATIONAL PROFILE
+            </span>
+
+            <h3>
+              Learning through
+              <span>exploration.</span>
+            </h3>
+
+            <p>
+              M.A.R.S. is primarily designed for children
+              and young people, offering a visual, intuitive,
+              and experimental experience. It also welcomes
+              participants aged 16 and above.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="mars-world-phases">
+
+          <div class="mars-world-section-heading" data-mars-reveal>
+
+            <span class="mars-world-index">
+              MISSION FLOW
+            </span>
+
+            <h3>
+              Four stages.
+              <span>One mission.</span>
+            </h3>
+
+            <p>
+              Each stage represents a new step in the preparation
+              and survival journey of the junior commander.
+            </p>
+
+          </div>
+
+          <div class="mars-world-phase-list">
+
+            <article class="mars-world-phase" data-mars-reveal>
+
+              <span class="mars-world-phase-number">01</span>
+
+              <div>
+                <span>INTRODUCTION</span>
+                <h4>First Contact</h4>
+                <p>
+                  Understanding the challenge and introducing
+                  the mission environment at Jezero Crater.
+                </p>
+              </div>
+
+            </article>
+
+            <article class="mars-world-phase" data-mars-reveal>
+
+              <span class="mars-world-phase-number">02</span>
+
+              <div>
+                <span>TRAINING</span>
+                <h4>Preparing for Survival</h4>
+                <p>
+                  Becoming familiar with life support indicators,
+                  radiation levels, energy systems, and food supplies.
+                </p>
+              </div>
+
+            </article>
+
+            <article class="mars-world-phase" data-mars-reveal>
+
+              <span class="mars-world-phase-number">03</span>
+
+              <div>
+                <span>MAIN MISSION</span>
+                <h4>Decisions Under Pressure</h4>
+                <p>
+                  Managing difficult scenarios and making decisions
+                  while working with limited resources.
+                </p>
+              </div>
+
+            </article>
+
+            <article class="mars-world-phase" data-mars-reveal>
+
+              <span class="mars-world-phase-number">04</span>
+
+              <div>
+                <span>EVALUATION</span>
+                <h4>The Mission Outcome</h4>
+                <p>
+                  Performance evaluation and the awarding
+                  of badges or medals.
+                </p>
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+        <div class="mars-world-habitat">
+
+          <div class="mars-world-section-heading" data-mars-reveal>
+
+            <span class="mars-world-index">
+              HABITAT ARCHITECTURE
+            </span>
+
+            <h3>
+              Inside the
+              <span>habitat.</span>
+            </h3>
+
+            <p>
+              Four connected areas representing the main
+              activities within a Martian base.
+            </p>
+
+          </div>
+
+          <div class="mars-world-areas">
+
+            <article class="mars-world-area" data-mars-reveal>
+
+              <span class="mars-world-area-number">01</span>
+
+              <div>
+                <span>HABITATION MODULE</span>
+                <h4>Main Habitat</h4>
+
+                <p>
+                  The central living and operations area.
+                  It includes sleeping quarters, a rest area,
+                  and environmental control consoles used to
+                  monitor oxygen levels, temperature, and life support.
+                </p>
+              </div>
+
+            </article>
+
+            <article class="mars-world-area" data-mars-reveal>
+
+              <span class="mars-world-area-number">02</span>
+
+              <div>
+                <span>AIRLOCK SYSTEM</span>
+                <h4>Airlocks</h4>
+
+                <p>
+                  Depressurization chambers designed to prepare
+                  spacesuits and teach the necessary sequence
+                  of procedures before stepping onto the
+                  Martian surface.
+                </p>
+              </div>
+
+            </article>
+
+            <article class="mars-world-area" data-mars-reveal>
+
+              <span class="mars-world-area-number">03</span>
+
+              <div>
+                <span>INFLATABLE HABITAT</span>
+                <h4>Inflatable Habitat</h4>
+
+                <p>
+                  A 16-meter expansion area designed for
+                  laboratories and storage. It can serve
+                  as a research space for life sciences
+                  and geophysics.
+                </p>
+              </div>
+
+            </article>
+
+            <article class="mars-world-area" data-mars-reveal>
+
+              <span class="mars-world-area-number">04</span>
+
+              <div>
+                <span>EXTERNAL MONITORING</span>
+                <h4>Monitoring Station</h4>
+
+                <p>
+                  An outdoor area for interpreting weather
+                  conditions, wind speed, and data received
+                  through communication antennas.
+                </p>
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+        <footer class="mars-world-footer" data-mars-reveal>
+
+          <span class="mars-world-index">
+            NEXT DEVELOPMENT STEPS
+          </span>
+
+          <h3>
+            The mission
+            <span>starts here.</span>
+          </h3>
+
+          <div class="mars-world-footer-divider"></div>
+
+        </footer>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- PLAYABLE M.A.R.S. GAME -->
+    <section class="mars-game-section" id="simulador" aria-labelledby="mars-game-title">
+      <div class="mars-game-stars" aria-hidden="true"></div>
+
+      <div class="mars-game-container">
+        <header class="mars-game-heading">
+          <span class="mars-game-eyebrow">M.A.R.S. / LIVE SIMULATION</span>
+
+          <div class="mars-game-heading-grid">
+            <h2 id="mars-game-title">Take command of <span>Jezero Crater.</span></h2>
+
+            <p>
+              Step inside the Martian habitat, protect your crew, manage vital
+              resources, and complete the mission one decision at a time.
+            </p>
+          </div>
+        </header>
+
+        <div class="mars-game-console">
+          <div class="mars-game-console-bar">
+            <div class="mars-game-console-label">
+              <span class="mars-game-live-dot" aria-hidden="true"></span>
+              <span>MISSION CONTROL / INTERACTIVE MODULE</span>
+            </div>
+
+            <button class="mars-game-fullscreen" id="marsGameFullscreen" type="button" aria-controls="marsGameFrame">
+              EXPAND SIMULATOR <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+
+          <div class="mars-game-screen">
+            <iframe
+              id="marsGameFrame"
+              src="mars-game/index.html"
+              title="M.A.R.S. playable mission simulator"
+              loading="lazy"
+              allow="fullscreen; gamepad"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+
+          <div class="mars-game-console-footer">
+            <span>MISSION ENVIRONMENT: JEZERO CRATER / MARS</span>
+            <span>O₂ · FOOD · RADIATION · CREW</span>
+          </div>
+        </div>
+
+        <div class="mars-game-bottom-row">
+          <p>For the best experience, play on a larger screen. Use the in-game controls to explore each module and complete your objectives.</p>
+          <a href="https://github.com/Palomixsaved/M.A.R.S" target="_blank" rel="noopener noreferrer">
+            EXPLORE THE SOURCE CODE <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section">
+
+      <div class="closing-orb" aria-hidden="true"></div>
+
+      <div class="closing-content section-pad">
+
+        <p class="eyebrow reveal">
+          MISSION ARES RISK SIMULATOR
+        </p>
+
+        <h2 class="closing-title reveal">
+          WE ARE<br>
+          <em>BENFRANK S.C.</em>
+        </h2>
+
+      </div>
+
+    </section>
+
+    <footer class="footer">
+
+      <a class="footer-brand" href="#top">
+        MARS<i>.</i>
+      </a>
+
+      <span>NASA SPACE APPS PROJECT</span>
+
+      <a class="back-top">
+        BY BENFRANK S.C.
+      </a>
+
+    </footer>
+
+  </main>
+
+  <audio
+    id="backgroundMusic"
+    src="Soundscape - Audio.mpeg"
+    loop
+    preload="none">
+  </audio>
+
+</body>
+</html>

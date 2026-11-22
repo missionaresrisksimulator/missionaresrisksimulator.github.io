@@ -1,0 +1,18 @@
+M.A.R.S. — MOBILE INPUT V8 / LIVE DOM SYNC / ENGLISH UI
+
+INSTALLATION
+1. Make a backup of the currently deployed mars-game folder.
+2. Replace the entire mars-game folder with this one. Do not merge individual files.
+3. Push the complete update to GitHub Pages.
+4. After deployment, open the site in a private/incognito tab for the first test.
+
+WHAT CHANGED
+- Preserves the v6/v7 original game layout, field positions, sizing, and English interface.
+- Keeps native HTML inputs positioned over the original Pygame fields.
+- Python now reads each live HTML input.value directly on every game frame.
+- localStorage is only a fallback, not the primary source of the typed text.
+- Adds explicit handling for paste/cut/drop as additional input pathways.
+- Uses cache-busted v8 JavaScript and Python archive names.
+- Desktop keyboard input remains on the original Pygame path.
+
+The GitHub Pages build loads mars_web_mobile_v8.tar.gz from index.html.
